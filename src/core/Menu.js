@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const NavBarBrand = styled.a`
-  @media (min-width: 300px) {
+  @media (min-width: 1px) {
     font-size: 1.1em !important;
   }
   @media (min-width: 991px) {

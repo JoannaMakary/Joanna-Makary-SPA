@@ -1,39 +1,4 @@
 @media only screen and (min-width: 1px) {
-  .content__title {
-    position: absolute;
-    top: 33%;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    margin: -5.5vw 0 0 0;
-    z-index: 100;
-    color: white;
-    line-height: 1;
-  }
-
-  .front-box,
-  .back-box,
-  .devops-box,
-  .other-box {
-    position: static !important;
-    height: 50vw;
-    width: 50vw;
-  }
-
-  .database-box {
-    position: static !important;
-    height: 60vw;
-    width: 60vw;
-  }
-
-  #devops-img {
-    width: 75vw;
-  }
-
-  #about > div.row > div:nth-child(1) {
-    height: 120vh !important;
-  }
-
   body::-webkit-scrollbar {
     width: 0.66em;
     background-color: rgba(30, 32, 43, 0.9);
@@ -176,15 +141,21 @@
     z-index: 999 !important;
     position: fixed !important;
     width: 100%;
-    padding-left: 5vw !important;
-    padding-right: 5vw !important;
+    padding: 0 !important;
   }
 
   .nav-item {
     padding-right: 15px;
+    text-align: center;
   }
 
   .navbar-toggler {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+  }
+
+  #root > div > div > nav > button {
     position: absolute;
     right: 10px;
   }
@@ -201,6 +172,41 @@
 
   #basicExampleNav > ul > li {
     margin-right: 5px;
+  }
+
+  .content__title {
+    position: absolute;
+    top: 33%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    margin: -5.5vw 0 0 0;
+    z-index: 100;
+    color: white;
+    line-height: 1;
+  }
+
+  .front-box,
+  .back-box,
+  .devops-box,
+  .other-box {
+    position: static !important;
+    height: 50vw;
+    width: 50vw;
+  }
+
+  .database-box {
+    position: static !important;
+    height: 60vw;
+    width: 60vw;
+  }
+
+  #devops-img {
+    width: 75vw;
+  }
+
+  #about > div.row > div:nth-child(1) {
+    height: 120vh !important;
   }
 
   #iphone {
@@ -461,6 +467,20 @@
     padding: 0 !important;
   }
 
+  #back-tools,
+  #data-tools,
+  #other-tools {
+    padding-top: 20px;
+  }
+
+  #front-tools > img,
+  #back-tools > img,
+  #data-tools > img,
+  #dev-tools > img,
+  #other-tools > img {
+    width: 100px;
+  }
+
   #front-tools > img,
   #back-tools > img,
   #data-tools > img,
@@ -472,15 +492,6 @@
   #back-tools {
     margin-left: 33px;
     margin-right: 33px;
-  }
-
-  #dev-tools {
-    margin-left: 15%;
-    margin-right: 25px;
-  }
-
-  #other-tools {
-    margin-right: 15%;
   }
 
   .stack,
@@ -662,5 +673,23 @@
 
   #devops-img {
     width: 25vw;
+  }
+
+  .navbar {
+    padding-left: 5vw !important;
+    padding-right: 5vw !important;
+  }
+
+  .nav-item {
+    padding-right: 15px;
+    text-align: left;
+  }
+
+  #dev-tools {
+    margin-left: 100px;
+  }
+
+  #other-tools {
+    margin-right: 100px;
   }
 }

@@ -16,7 +16,7 @@ AOS.init({
 });
 
 const Homepage = styled.div`
-  @media (min-width: 300px) {
+  @media (min-width: 1px) {
     background-color: rgba(0, 0, 0, 0.1);
     border-radius: 10px;
   }
@@ -26,7 +26,7 @@ const Homepage = styled.div`
 `;
 
 const AboutMe = styled.div`
-  @media (min-width: 300px) {
+  @media (min-width: 1px) {
     width: 100%;
     position: relative;
     z-index: 99;
@@ -37,25 +37,35 @@ const AboutMe = styled.div`
 `;
 
 const AboutBlurb = styled.div`
-  font-size: 1.2rem;
-  color: white;
-  width: 66%;
-  margin: auto;
-  text-align: left;
-  padding-top: 5vh;
+  @media (min-width: 1px) {
+    font-size: 1.2rem;
+    color: white;
+    width: 66%;
+    margin: auto;
+    text-align: left;
+    padding-top: 15vh;
+  }
+  @media (min-width: 768px) {
+    padding-top: 5vh;
+  }
 `;
 
 const AboutSideBar = styled.div`
-  font-size: 5rem;
-  color: white;
-  text-transform: uppercase;
-  font-weight: 600;
-  letter-spacing: 5px;
-  color: #b0bfff;
-  position: absolute;
-  transform: rotate(-90deg);
-  margin-top: 160px;
-  margin-left: -175px;
+  @media (min-width: 1px) {
+    font-size: 5rem;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 5px;
+    color: #b0bfff;
+    position: absolute;
+    transform: rotate(-90deg);
+    margin-top: 160px;
+    margin-left: -195px;
+  }
+  @media (min-width: 768px) {
+    margin-left: -175px;
+  }
 `;
 
 const ProjectSideBar = styled.div`
@@ -72,19 +82,20 @@ const ProjectSideBar = styled.div`
 `;
 
 const JoannaText = styled.h1`
-  @media (min-width: 300px) {
-    font-size: 6rem;
+  @media (min-width: 1px) {
+    font-size: 4rem;
     width: 100%;
     letter-spacing: 2px !important;
     color: #b0bfff;
     font-weight: 600;
   }
-  @media (min-width: 1080px) {
+  @media (min-width: 480px) {
+    font-size: 6rem;
   }
 `;
 
 const JobTitle = styled.h2`
-  @media (min-width: 300px) {
+  @media (min-width: 1px) {
     text-shadow: 3px 3px 20px #000000;
     font-size: 1.5em;
     width: 100%;
@@ -110,7 +121,7 @@ const ErrorMessage = styled.div`
 `;
 
 const Buttons = styled.div`
-  @media (min-width: 300px) {
+  @media (min-width: 1px) {
     text-shadow: 3px 3px 20px #000000;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
     margin-top: 20px;
@@ -142,7 +153,7 @@ const Buttons = styled.div`
 `;
 
 const Projects = styled.div`
-  @media (min-width: 300px) {
+  @media (min-width: 1px) {
     width: 100%;
     position: relative;
     z-index: 99;
@@ -189,15 +200,24 @@ const CardsContainer = styled.div`
 `;
 
 const ProjectCard = styled.div`
-  position: relative;
-  height: auto;
-  width: 100vw;
-  flex-shrink: 0;
-  padding: 2vw 2vw 0vw 8vw;
+  @media (min-width: 1px) {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    flex-shrink: 0;
+    padding: 2vw 2vw 0vw 8vw;
+  }
+  @media (min-width: 768px) {
+    position: relative;
+    height: auto;
+    width: 100vw;
+    flex-shrink: 0;
+    padding: 2vw 2vw 0vw 8vw;
+  }
 `;
 
 const ContactMe = styled.div`
-  @media (min-width: 300px) {
+  @media (min-width: 1px) {
     width: 100%;
     position: relative;
     z-index: 99;
@@ -211,7 +231,7 @@ const ContactMe = styled.div`
 `;
 
 const Footer = styled.div`
-  @media (min-width: 300px) {
+  @media (min-width: 1px) {
     width: 100%;
     position: relative;
     z-index: 99;
@@ -345,7 +365,7 @@ class Home extends Component {
                     id="front-tools"
                     className="col-sm"
                   >
-                    <img src="https://i.imgur.com/ZpNHPdY.png" width="50%" />
+                    <img src="https://i.imgur.com/ZpNHPdY.png" />
                     <br />
                     HTML5, CSS3, JavaScript, jQuery. <br />
                     Frameworks: React, Angular, Bootstrap
@@ -358,7 +378,7 @@ class Home extends Component {
                     id="back-tools"
                     className="col-sm"
                   >
-                    <img src="https://i.imgur.com/j3Vcy6l.png" width="50%" />
+                    <img src="https://i.imgur.com/j3Vcy6l.png" />
                     <br />
                     PHP, Python, Java, JavaScript
                     <br />
@@ -370,7 +390,7 @@ class Home extends Component {
                     id="data-tools"
                     className="col-sm"
                   >
-                    <img src="https://i.imgur.com/G8qXeMJ.png" width="50%" />
+                    <img src="https://i.imgur.com/G8qXeMJ.png" />
                     <br />
                     Web Storage
                     <br />
@@ -381,7 +401,7 @@ class Home extends Component {
                 </div>
                 <div className="row">
                   <div data-aos="flip-left" id="dev-tools" className="col-sm">
-                    <img src="https://i.imgur.com/D0JYPuz.png" width="50%" />
+                    <img src="https://i.imgur.com/D0JYPuz.png" />
                     <br />
                     Git/Github
                     <br />
@@ -390,7 +410,7 @@ class Home extends Component {
                     VMWare/Virtualbox
                   </div>
                   <div data-aos="flip-left" id="other-tools" className="col-sm">
-                    <img src="https://i.imgur.com/7NpOszx.png" width="50%" />
+                    <img src="https://i.imgur.com/7NpOszx.png" />
                     <br />
                     RESTful Routing, APIs
                     <br />
@@ -415,7 +435,7 @@ class Home extends Component {
               <CardsContainer>
                 <ProjectCard id="royals">
                   <div className="row" data-aos="fade-right" data-aos-once="true">
-                    <div className="col-6">
+                    <div className="col-sm-6">
                       <ProjectHeader>PERSONAL PROJECT</ProjectHeader>
                       <ProjectTitle>MapleRoyals Price Guide</ProjectTitle>
                       <ProjectInfo>
@@ -433,7 +453,7 @@ class Home extends Component {
                         <Buttons>View Website</Buttons>
                       </a>
                     </div>
-                    <div className="col-6">
+                    <div className="col-sm-6">
                       <img id="project-1" src="https://i.imgur.com/gcChAxT.png" />
                       <img id="project-1-desktop" src="https://i.imgur.com/sSCvI9w.png" />
                       <img
@@ -446,7 +466,7 @@ class Home extends Component {
                 <ProjectCard id="prc-1">
                   {" "}
                   <div className="row">
-                    <div className="col-6">
+                    <div className="col-sm-6">
                       <ProjectHeader>WORKPLACE PROJECT</ProjectHeader>
                       <ProjectTitle>PRC Caterers (WordPress)</ProjectTitle>
                       <ProjectInfo>
@@ -466,7 +486,7 @@ class Home extends Component {
                         <Buttons>Website</Buttons>
                       </a>
                     </div>
-                    <div className="col-6">
+                    <div className="col-sm-6">
                       <a href="https://prccaterers.com/passover-menu/">
                         <img id="project-2" src="https://i.imgur.com/oWsieTO.png" />
                       </a>
@@ -476,7 +496,7 @@ class Home extends Component {
                 <ProjectCard id="prc-2">
                   {" "}
                   <div className="row">
-                    <div className="col-6">
+                    <div className="col-sm-6">
                       <ProjectHeader>WORKPLACE PROJECT</ProjectHeader>
                       <ProjectTitle>
                         PRC Caterers
@@ -501,7 +521,7 @@ class Home extends Component {
                         <Buttons>Instagram</Buttons>
                       </a>
                     </div>
-                    <div className="col-6">
+                    <div className="col-sm-6">
                       <a href="https://drive.google.com/drive/folders/14wwzGtT8qypDnlqGyTdNeQaNS5XJQFVt?usp=sharing">
                         <img id="project-3" src="https://i.imgur.com/qV2tI7u.png" />
                       </a>
@@ -512,7 +532,7 @@ class Home extends Component {
                 <ProjectCard>
                   {" "}
                   <div className="row">
-                    <div className="col-6">
+                    <div className="col-sm-6">
                       <ProjectHeader>WORKPLACE/PERSONAL PROJECT</ProjectHeader>
                       <ProjectTitle>Jo's Nutrition Calculator</ProjectTitle>
                       <ProjectInfo>
@@ -532,7 +552,7 @@ class Home extends Component {
                         <Buttons className="mr-3">VIEW CODE</Buttons>
                       </a>
                     </div>
-                    <div className="col-6">
+                    <div className="col-sm-6">
                       <a href="https://github.com/JoannaMakary/JoNutritionalInfo">
                         <img id="project-4" src="https://i.imgur.com/3T4Yqt3.png" />
                       </a>
@@ -542,7 +562,7 @@ class Home extends Component {
                 <ProjectCard>
                   {" "}
                   <div className="row">
-                    <div className="col-6">
+                    <div className="col-sm-6">
                       <ProjectHeader>PERSONAL PROJECT</ProjectHeader>
                       <ProjectTitle>MapleRoyals Price Bot</ProjectTitle>
                       <ProjectInfo>
@@ -563,7 +583,7 @@ class Home extends Component {
                         <Buttons className="mr-3">VIEW CODE</Buttons>
                       </a>
                     </div>
-                    <div className="col-6">
+                    <div className="col-sm-6">
                       <a href="https://github.com/JoannaMakary/Royals-OCR">
                         <img id="project-5" src="https://i.imgur.com/WAjWgwP.png" />
                       </a>
@@ -573,7 +593,7 @@ class Home extends Component {
                 <ProjectCard>
                   {" "}
                   <div className="row">
-                    <div className="col-6">
+                    <div className="col-sm-6">
                       <ProjectHeader>PERSONAL PROJECT</ProjectHeader>
                       <ProjectTitle>World of League - Browser RPG</ProjectTitle>
                       <ProjectInfo>
@@ -597,7 +617,7 @@ class Home extends Component {
                         <Buttons className="mr-3">VIEW CODE</Buttons>
                       </a>
                     </div>
-                    <div className="col-6">
+                    <div className="col-sm-6">
                       <a href="https://github.com/JoannaMakary/World-of-League">
                         <img id="project-6" src="https://i.imgur.com/x2oneLd.png" />
                       </a>
@@ -607,7 +627,7 @@ class Home extends Component {
                 <ProjectCard>
                   {" "}
                   <div className="row">
-                    <div className="col-6">
+                    <div className="col-sm-6">
                       <ProjectHeader>VIEW MORE</ProjectHeader>
                       <ProjectTitle>
                         Visit my GitHub to see more <br />
@@ -622,7 +642,7 @@ class Home extends Component {
                         <Buttons className="mr-3">VISIT GITHUB</Buttons>
                       </a>
                     </div>
-                    <div className="col-6">
+                    <div className="col-sm-6">
                       <a href="https://github.com/JoannaMakary?tab=repositories">
                         <img id="project-7" src="https://i.imgur.com/p2SCOOv.png" />
                       </a>
@@ -633,9 +653,9 @@ class Home extends Component {
             </HorizontalScroll>
           </HorizontalSection>
         </Projects>
-        <div id="myModal" class="modal">
-          <div class="modal-content">
-            <span class="close">&times;</span>
+        <div id="myModal" className="modal">
+          <div className="modal-content">
+            <span className="close">&times;</span>
             <div id="contact-me" className="container">
               <form method="POST" action="https://formspree.io/f/moqpdaeb" id="contact-form">
                 <h2 id="contact-text">Contact me</h2>

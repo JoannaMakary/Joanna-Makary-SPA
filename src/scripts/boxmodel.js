@@ -82,21 +82,21 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     if (vw <= 768) {
       frontBox.style.transform =
-        "rotateX(45deg) rotate(45deg) translateZ(50vw) translateY(10vw) translateX(0vh)";
+        "rotateX(45deg) rotate(45deg) translateZ(15vh) translateY(0vh) translateX(0vh)";
       backBox.style.transform =
-        "rotateX(45deg) rotate(45deg)  translateZ(80vw) translateY(10vw) translateX(0vh)";
+        "rotateX(45deg) rotate(45deg)  translateZ(15vh) translateY(-5vh) translateX(-5vh)";
       dataBox.style.transform =
-        "rotateX(45deg) rotate(45deg)  translateZ(120vw) translateY(15vw) translateX(0vh)";
+        "rotateX(45deg) rotate(45deg)  translateZ(23vh) translateY(-2vh) translateX(-10vh)";
       devBox.style.transform =
-        "rotateX(45deg) rotate(45deg) translateZ(160vw) translateY(25vw) translateX(0vh)";
+        "rotateX(45deg) rotate(45deg) translateZ(23vh) translateY(-5vh) translateX(-15vh)";
       otherBox.style.transform =
-        "rotateX(45deg) rotate(45deg)  translateZ(180vw) translateY(20vw) translateX(0vh)";
+        "rotateX(45deg) rotate(45deg)  translateZ(15vh) translateY(-20vh) translateX(-20vh)";
 
-      frontLabel.style.transform = "translateX(-70vw) translateY(-8vh)";
-      backLabel.style.transform = "translateX(-70vw) translateY(-18vh)";
-      dataLabel.style.transform = "translateX(-70vw) translateY(-28vh)";
-      devLabel.style.transform = "translateX(-70vw) translateY(-48vh)";
-      otherLabel.style.transform = "translateX(-70vw) translateY(-52vh)";
+      frontLabel.style.transform = "translateX(-60vw) translateY(1vh)";
+      backLabel.style.transform = "translateX(-60vw) translateY(-4vh)";
+      dataLabel.style.transform = "translateX(-60vw) translateY(-9vh)";
+      devLabel.style.transform = "translateX(-60vw) translateY(-14vh)";
+      otherLabel.style.transform = "translateX(-60vw) translateY(-19vh)";
     }
     if (vw > 768) {
       frontBox.style.transform =
@@ -184,13 +184,24 @@ document.addEventListener("DOMContentLoaded", function (event) {
   }
 
   function moveAboutSide() {
+    var vw = window.innerWidth;
+    console.log(vw);
     var windowTop = window.pageYOffset;
     var topPosition = windowTop - 500;
 
-    if (topPosition > 0 && topPosition < 900) {
-      var movePosition = topPosition + "px";
-      // var leftPosition = windowTop - elementTop + "px";
-      aboutSide.style.top = movePosition;
+    if (vw <= 436) {
+      if (topPosition > 0 && topPosition < 1200) {
+        var movePosition = topPosition + "px";
+        // var leftPosition = windowTop - elementTop + "px";
+        aboutSide.style.top = movePosition;
+      }
+    }
+    if (vw > 436) {
+      if (topPosition > 0 && topPosition < 900) {
+        var movePosition = topPosition + "px";
+        // var leftPosition = windowTop - elementTop + "px";
+        aboutSide.style.top = movePosition;
+      }
     }
   }
 
