@@ -16,7 +16,7 @@ AOS.init({
 });
 
 const Homepage = styled.div`
-  @media (min-width: 320px) {
+  @media (min-width: 300px) {
     background-color: rgba(0, 0, 0, 0.1);
     border-radius: 10px;
   }
@@ -26,7 +26,7 @@ const Homepage = styled.div`
 `;
 
 const AboutMe = styled.div`
-  @media (min-width: 320px) {
+  @media (min-width: 300px) {
     width: 100%;
     position: relative;
     z-index: 99;
@@ -72,7 +72,7 @@ const ProjectSideBar = styled.div`
 `;
 
 const JoannaText = styled.h1`
-  @media (min-width: 320px) {
+  @media (min-width: 300px) {
     font-size: 6rem;
     width: 100%;
     letter-spacing: 2px !important;
@@ -84,7 +84,7 @@ const JoannaText = styled.h1`
 `;
 
 const JobTitle = styled.h2`
-  @media (min-width: 320px) {
+  @media (min-width: 300px) {
     text-shadow: 3px 3px 20px #000000;
     font-size: 1.5em;
     width: 100%;
@@ -110,7 +110,7 @@ const ErrorMessage = styled.div`
 `;
 
 const Buttons = styled.div`
-  @media (min-width: 320px) {
+  @media (min-width: 300px) {
     text-shadow: 3px 3px 20px #000000;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
     margin-top: 20px;
@@ -142,7 +142,7 @@ const Buttons = styled.div`
 `;
 
 const Projects = styled.div`
-  @media (min-width: 320px) {
+  @media (min-width: 300px) {
     width: 100%;
     position: relative;
     z-index: 99;
@@ -197,7 +197,7 @@ const ProjectCard = styled.div`
 `;
 
 const ContactMe = styled.div`
-  @media (min-width: 320px) {
+  @media (min-width: 300px) {
     width: 100%;
     position: relative;
     z-index: 99;
@@ -211,7 +211,7 @@ const ContactMe = styled.div`
 `;
 
 const Footer = styled.div`
-  @media (min-width: 320px) {
+  @media (min-width: 300px) {
     width: 100%;
     position: relative;
     z-index: 99;

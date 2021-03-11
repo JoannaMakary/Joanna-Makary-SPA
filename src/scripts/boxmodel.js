@@ -82,21 +82,21 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     if (vw <= 768) {
       frontBox.style.transform =
-        "rotateX(45deg) rotate(45deg) translateZ(0vh) translateY(0vh) translateX(0vh)";
+        "rotateX(45deg) rotate(45deg) translateZ(50vw) translateY(10vw) translateX(0vh)";
       backBox.style.transform =
-        "rotateX(45deg) rotate(45deg)  translateZ(40vh) translateY(5vh) translateX(5vh)";
+        "rotateX(45deg) rotate(45deg)  translateZ(80vw) translateY(10vw) translateX(0vh)";
       dataBox.style.transform =
-        "rotateX(45deg) rotate(45deg)  translateZ(80vh) translateY(10vh) translateX(10vh)";
+        "rotateX(45deg) rotate(45deg)  translateZ(120vw) translateY(15vw) translateX(0vh)";
       devBox.style.transform =
-        "rotateX(45deg) rotate(45deg) translateZ(110vh) translateY(15vh) translateX(15vh)";
+        "rotateX(45deg) rotate(45deg) translateZ(160vw) translateY(25vw) translateX(0vh)";
       otherBox.style.transform =
-        "rotateX(45deg) rotate(45deg)  translateZ(150vh) translateY(20vh) translateX(20vh)";
+        "rotateX(45deg) rotate(45deg)  translateZ(180vw) translateY(20vw) translateX(0vh)";
 
-      frontLabel.style.transform = "translateX(-50vw) translateY(15vh)";
-      backLabel.style.transform = "translateX(-50vw) translateY(-8vh)";
-      dataLabel.style.transform = "translateX(-50vw) translateY(-30vh)";
-      devLabel.style.transform = "translateX(-50vw) translateY(-58vh)";
-      otherLabel.style.transform = "translateX(-50vw) translateY(-68vh)";
+      frontLabel.style.transform = "translateX(-70vw) translateY(-8vh)";
+      backLabel.style.transform = "translateX(-70vw) translateY(-18vh)";
+      dataLabel.style.transform = "translateX(-70vw) translateY(-28vh)";
+      devLabel.style.transform = "translateX(-70vw) translateY(-48vh)";
+      otherLabel.style.transform = "translateX(-70vw) translateY(-52vh)";
     }
     if (vw > 768) {
       frontBox.style.transform =
@@ -110,11 +110,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
       otherBox.style.transform =
         "rotateX(45deg) rotate(45deg)  translateZ(15vh) translateY(50vh) translateX(50vh)";
 
-      frontLabel.style.transform = "translateX(-27vw) translateY(2vh)";
-      backLabel.style.transform = "translateX(-27vw) translateY(12vh)";
-      dataLabel.style.transform = "translateX(-27vw) translateY(22vh)";
-      devLabel.style.transform = "translateX(-27vw) translateY(32vh)";
-      otherLabel.style.transform = "translateX(-27vw) translateY(42vh)";
+      frontLabel.style.transform = "translateX(-27vw) translateY(5vh)";
+      backLabel.style.transform = "translateX(-27vw) translateY(20vh)";
+      dataLabel.style.transform = "translateX(-27vw) translateY(35vh)";
+      devLabel.style.transform = "translateX(-27vw) translateY(45vh)";
+      otherLabel.style.transform = "translateX(-27vw) translateY(55vh)";
     }
   }
 
