@@ -276,6 +276,7 @@
   #bokeh2,
   #bokeh3 {
     position: absolute;
+    width: 100%;
   }
 
   #bokeh3 {
@@ -656,6 +657,21 @@
   }
 }
 
+@media only screen and (min-width: 500px) {
+  .front-box,
+  .back-box,
+  .devops-box,
+  .other-box {
+    height: 40vw;
+    width: 40vw;
+  }
+
+  .database-box {
+    height: 50vw;
+    width: 50vw;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   .content__title {
     top: 45%;
@@ -667,12 +683,12 @@
   .devops-box,
   .other-box {
     position: absolute !important;
-    height: 20vw;
-    width: 20vw;
+    height: 30vw;
+    width: 30vw;
   }
 
   #devops-img {
-    width: 25vw;
+    width: 40vw;
   }
 
   .navbar {
@@ -684,7 +700,36 @@
     padding-right: 15px;
     text-align: left;
   }
+}
 
+@media only screen and (min-width: 1000px) {
+  .front-box,
+  .back-box,
+  .database-box,
+  .devops-box,
+  .other-box {
+    position: absolute !important;
+    height: 20vw;
+    width: 20vw;
+  }
+
+  .database-box {
+    height: 23vw;
+    width: 23vw;
+  }
+
+  #devops-img {
+    width: 30vw;
+  }
+
+  #back-tools,
+  #data-tools,
+  #other-tools {
+    padding-top: 0px;
+  }
+}
+
+@media only screen and (min-width: 1270px) {
   #dev-tools {
     margin-left: 100px;
   }

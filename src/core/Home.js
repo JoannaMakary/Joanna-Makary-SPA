@@ -45,6 +45,21 @@ const AboutBlurb = styled.div`
     text-align: left;
     padding-top: 15vh;
   }
+  @media (min-width: 455px) {
+    padding-top: 20vh;
+  }
+  @media (min-width: 600px) {
+    padding-top: 40vh;
+  }
+  @media (min-width: 650px) {
+    padding-top: 50vh;
+  }
+  @media (min-width: 700px) {
+    padding-top: 60vh;
+  }
+  @media (min-width: 750px) {
+    padding-top: 70vh;
+  }
   @media (min-width: 768px) {
     padding-top: 5vh;
   }
