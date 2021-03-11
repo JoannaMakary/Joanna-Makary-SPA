@@ -95,7 +95,10 @@ class Menu extends Component {
               </a>
             </MenuItem>
             <MenuItem className="nav-item">
-              <a className="nav-link" href="https://github.com/JoannaMakary?tab=repositories">
+              <a
+                className="nav-link"
+                href="https://drive.google.com/file/d/1-dDzQgWYRidZwHrHD-aYmAdYsvAkxhhz/view?usp=sharing"
+              >
                 Resume
               </a>
             </MenuItem>

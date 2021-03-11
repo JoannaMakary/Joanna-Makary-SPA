@@ -68,17 +68,20 @@ function initParticles() {
 function initParticle(i) {
   let x, y, vx, vy, life, ttl, speed, radius, hue;
 
-  x = rand(canvas.a.width);
-  y = center[1] + randRange(rangeY);
-  vx = 0;
-  vy = 0;
-  life = 0;
-  ttl = baseTTL + rand(rangeTTL);
-  speed = baseSpeed + rand(rangeSpeed);
-  radius = baseRadius + rand(rangeRadius);
-  hue = baseHue + rand(rangeHue);
+  container = document.querySelector(".content--canvas");
+  if (container) {
+    x = rand(canvas.a.width);
+    y = center[1] + randRange(rangeY);
+    vx = 0;
+    vy = 0;
+    life = 0;
+    ttl = baseTTL + rand(rangeTTL);
+    speed = baseSpeed + rand(rangeSpeed);
+    radius = baseRadius + rand(rangeRadius);
+    hue = baseHue + rand(rangeHue);
 
-  particleProps.set([x, y, vx, vy, life, ttl, speed, radius, hue], i);
+    particleProps.set([x, y, vx, vy, life, ttl, speed, radius, hue], i);
+  }
 }
 
 function drawParticles() {
@@ -145,27 +148,31 @@ function checkBounds(x, y) {
 
 function createCanvas() {
   container = document.querySelector(".content--canvas");
-  canvas = {
-    a: document.createElement("canvas"),
-    b: document.createElement("canvas"),
-  };
-  canvas.b.style = `
+
+  if (container) {
+    canvas = {
+      a: document.createElement("canvas"),
+      b: document.createElement("canvas"),
+    };
+    canvas.b.style = `
 		position: fixed;
 		top: 0;
 		left: 0;
 		width: 100%;
 		height: 100%;
 	`;
-  container.appendChild(canvas.b);
-  ctx = {
-    a: canvas.a.getContext("2d"),
-    b: canvas.b.getContext("2d"),
-  };
-  center = [];
+    container.appendChild(canvas.b);
+    ctx = {
+      a: canvas.a.getContext("2d"),
+      b: canvas.b.getContext("2d"),
+    };
+    center = [];
+  }
 }
 
 function resize() {
-  if (testCanvas) {
+  container = document.querySelector(".content--canvas");
+  if (container) {
     const { innerWidth, innerHeight } = window;
 
     canvas.a.width = innerWidth;
@@ -205,18 +212,21 @@ function renderToScreen() {
 }
 
 function draw() {
-  tick++;
+  container = document.querySelector(".content--canvas");
+  if (container) {
+    tick++;
 
-  ctx.a.clearRect(0, 0, canvas.a.width, canvas.a.height);
+    ctx.a.clearRect(0, 0, canvas.a.width, canvas.a.height);
 
-  ctx.b.fillStyle = backgroundColor;
-  ctx.b.fillRect(0, 0, canvas.a.width, canvas.a.height);
+    ctx.b.fillStyle = backgroundColor;
+    ctx.b.fillRect(0, 0, canvas.a.width, canvas.a.height);
 
-  drawParticles();
-  renderGlow();
-  renderToScreen();
+    drawParticles();
+    renderGlow();
+    renderToScreen();
 
-  window.requestAnimationFrame(draw);
+    window.requestAnimationFrame(draw);
+  }
 }
 
 window.addEventListener("load", setup);

@@ -253,7 +253,6 @@ class Home extends Component {
             </Link>
           </div>
         </div>
-
         <AboutMe id="about">
           <AboutSideBar id="about-side">About Me</AboutSideBar>
           <img id="click-here" src="https://i.imgur.com/hdIAq01.png" />
@@ -406,7 +405,6 @@ class Home extends Component {
             </div>
           </div>
         </AboutMe>
-
         <Projects id="projectz">
           <img id="bokeh3" src="https://pngimg.com/uploads/bokeh/bokeh_PNG12.png" />
           <img id="projects" src="https://i.imgur.com/KfFWuG6.png" />
@@ -635,7 +633,6 @@ class Home extends Component {
             </HorizontalScroll>
           </HorizontalSection>
         </Projects>
-
         <div id="myModal" class="modal">
           <div class="modal-content">
             <span class="close">&times;</span>
@@ -673,7 +670,6 @@ class Home extends Component {
             </div>
           </div>
         </div>
-
         <Footer>
           <nav>
             <a href="https://www.linkedin.com/in/joannamakary/">Linkedin</a> |{" "}
