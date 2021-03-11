@@ -81,6 +81,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     console.log(vw);
 
     if (vw < 500) {
+      console.log("less than 500");
       frontBox.style.transform =
         "rotateX(45deg) rotate(45deg) translateZ(15vh) translateY(0vh) translateX(0vh)";
       backBox.style.transform =
@@ -97,7 +98,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
       dataLabel.style.transform = "translateX(-60vw) translateY(-9vh)";
       devLabel.style.transform = "translateX(-60vw) translateY(-14vh)";
       otherLabel.style.transform = "translateX(-60vw) translateY(-19vh)";
-    } else if (vw >= 500 || vw < 768) {
+    } else if (vw >= 500 && vw < 768) {
+      console.log("500-768");
       frontBox.style.transform =
         "rotateX(45deg) rotate(45deg) translateZ(15vh) translateY(0vh) translateX(0vh)";
       backBox.style.transform =
@@ -114,7 +116,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
       dataLabel.style.transform = "translateX(-60vw) translateY(-9vh)";
       devLabel.style.transform = "translateX(-60vw) translateY(-14vh)";
       otherLabel.style.transform = "translateX(-60vw) translateY(-19vh)";
-    } else if (vw >= 768 || vw < 1000) {
+    } else if (vw >= 768 && vw < 1000) {
+      console.log("768-1000");
       frontBox.style.transform =
         "rotateX(45deg) rotate(45deg) translateZ(15vh) translateY(0vh) translateX(0vh)";
       backBox.style.transform =
@@ -132,6 +135,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
       devLabel.style.transform = "translateX(-33vw) translateY(40vh)";
       otherLabel.style.transform = "translateX(-33vw) translateY(52vh)";
     } else if (vw >= 1000) {
+      console.log("more than 1000");
       frontBox.style.transform =
         "rotateX(45deg) rotate(45deg) translateZ(15vh) translateY(0vh) translateX(0vh)";
       backBox.style.transform =
