@@ -1,0 +1,79 @@
+#scrollHorizontal {
+  height: 100vh;
+  width: 400vw;
+}
+
+section > div {
+  height: auto;
+}
+
+#project-1,
+#project-4,
+#project-6 {
+  width: 90%;
+}
+
+#project-2,
+#project-5 {
+  width: 100%;
+}
+
+#project-3,
+#project-7 {
+  width: 95%;
+}
+
+#project-1-desktop {
+  width: 85%;
+  position: absolute;
+  top: 0px;
+  right: 90px;
+  display: none;
+}
+
+#project-1-gif {
+  position: absolute;
+  top: 18px;
+  right: 112px;
+  width: 79%;
+  height: 21vw;
+  display: none;
+}
+
+.swipe-in {
+  animation-name: keyswipein;
+  animation-duration: 0.25s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+}
+
+@keyframes keyswipein {
+  0% {
+    right: 1000px;
+    top: 0px;
+  }
+  100% {
+    right: 0px;
+    top: 0px;
+  }
+}
+
+.swipe-out {
+  animation-name: keyswipeout;
+  animation-duration: 0.25s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+}
+
+@keyframes keyswipeout {
+  0% {
+    right: 0px;
+    top: 0px;
+  }
+  100% {
+    right: 1000px;
+    top: 0px;
+  }
+}

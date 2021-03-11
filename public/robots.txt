@@ -1,0 +1,3 @@
+Sitemap: https://joannamakary.com/sitemap_location.xml
+
+User-agent: *
