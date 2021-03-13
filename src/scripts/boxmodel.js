@@ -11,8 +11,13 @@ document.addEventListener("DOMContentLoaded", function (event) {
   var foxBody = document.querySelector("#projects");
 
   var mapleProject = document.querySelector("#project-1");
-  var mapleDesktop = document.querySelector("#project-1-desktop");
   var mapleGif = document.querySelector("#project-1-gif");
+  var prcProject = document.querySelector("#project-2");
+  var prcGif = document.querySelector("#project-2-gif");
+  var prc2Project = document.querySelector("#project-3");
+  var prc2Gif = document.querySelector("#project-3-gif");
+  var nutritionProject = document.querySelector("#project-4");
+  var nutritionGif = document.querySelector("#project-4-gif");
 
   var topButton = document.querySelector("#backToTopButton");
 
@@ -68,8 +73,13 @@ document.addEventListener("DOMContentLoaded", function (event) {
     devTools.addEventListener("click", focusDev);
     otherTools.addEventListener("click", focusOther);
     mapleProject.addEventListener("click", animatePicture);
-    mapleDesktop.addEventListener("click", animatePicture);
     mapleGif.addEventListener("click", animatePicture);
+    prcProject.addEventListener("click", animatePicture);
+    prcGif.addEventListener("click", animatePicture);
+    prc2Project.addEventListener("click", animatePicture);
+    prc2Gif.addEventListener("click", animatePicture);
+    nutritionProject.addEventListener("click", animatePicture);
+    nutritionGif.addEventListener("click", animatePicture);
     contactBtn.addEventListener("click", openModal);
     contactLink.addEventListener("click", openModal);
     closeBtn.addEventListener("click", closeModal);
@@ -279,13 +289,35 @@ document.addEventListener("DOMContentLoaded", function (event) {
   function animatePicture() {
     if (this.id === "project-1") {
       mapleProject.style.display = "none";
-      mapleDesktop.style.display = "block";
       mapleGif.style.display = "block";
     }
-    if (this.id === "project-1-desktop" || this.id === "project-1-gif") {
+    if (this.id === "project-1-gif") {
       mapleProject.style.display = "block";
-      mapleDesktop.style.display = "none";
       mapleGif.style.display = "none";
+    }
+    if (this.id === "project-2") {
+      prcProject.style.display = "none";
+      prcGif.style.display = "block";
+    }
+    if (this.id === "project-2-gif") {
+      prcProject.style.display = "block";
+      prcGif.style.display = "none";
+    }
+    if (this.id === "project-3") {
+      prc2Project.style.display = "none";
+      prc2Gif.style.display = "block";
+    }
+    if (this.id === "project-3-gif") {
+      prc2Project.style.display = "block";
+      prc2Gif.style.display = "none";
+    }
+    if (this.id === "project-4") {
+      nutritionProject.style.display = "none";
+      nutritionGif.style.display = "block";
+    }
+    if (this.id === "project-4-gif") {
+      nutritionProject.style.display = "block";
+      nutritionGif.style.display = "none";
     }
   }
 

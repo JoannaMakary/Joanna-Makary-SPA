@@ -23,20 +23,27 @@ section > div {
   width: 95%;
 }
 
-#project-1-desktop {
-  width: 85%;
+#project-1-gif {
   position: absolute;
-  top: 0px;
-  right: 90px;
+  width: 86%;
   display: none;
 }
 
-#project-1-gif {
+#project-2-gif {
   position: absolute;
-  top: 18px;
-  right: 112px;
-  width: 79%;
-  height: 21vw;
+  width: 96%;
+  display: none;
+}
+
+#project-3-gif {
+  position: absolute;
+  width: 90%;
+  display: none;
+}
+
+#project-4-gif {
+  position: absolute;
+  width: 86%;
   display: none;
 }
 

@@ -655,6 +655,13 @@
   .prc {
     -webkit-transition: left 1s linear;
   }
+
+  .animate-click {
+    position: absolute;
+    width: 150px;
+    top: -100px;
+    right: 100px;
+  }
 }
 
 @media only screen and (min-width: 500px) {

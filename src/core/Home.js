@@ -449,6 +449,7 @@ class Home extends Component {
             <HorizontalScroll>
               <CardsContainer>
                 <ProjectCard id="royals">
+                  <img className="animate-click" src="https://i.imgur.com/W8pqzv4.png" />
                   <div className="row" data-aos="fade-right" data-aos-once="true">
                     <div className="col-sm-6">
                       <ProjectHeader>PERSONAL PROJECT</ProjectHeader>
@@ -470,16 +471,15 @@ class Home extends Component {
                     </div>
                     <div className="col-sm-6">
                       <img id="project-1" src="https://i.imgur.com/gcChAxT.png" />
-                      <img id="project-1-desktop" src="https://i.imgur.com/sSCvI9w.png" />
                       <img
                         id="project-1-gif"
-                        src="https://media1.giphy.com/media/L6dUpFZy3GAG04nYs3/giphy.gif"
+                        src="https://media0.giphy.com/media/Q1UPgr2bvSWUXOYvC8/giphy.gif"
                       />
                     </div>
                   </div>
                 </ProjectCard>
                 <ProjectCard id="prc-1">
-                  {" "}
+                  <img className="animate-click" src="https://i.imgur.com/W8pqzv4.png" />{" "}
                   <div className="row">
                     <div className="col-sm-6">
                       <ProjectHeader>WORKPLACE PROJECT</ProjectHeader>
@@ -502,14 +502,16 @@ class Home extends Component {
                       </a>
                     </div>
                     <div className="col-sm-6">
-                      <a href="https://prccaterers.com/passover-menu/">
-                        <img id="project-2" src="https://i.imgur.com/oWsieTO.png" />
-                      </a>
+                      <img id="project-2" src="https://i.imgur.com/oWsieTO.png" />
+                      <img
+                        id="project-2-gif"
+                        src="https://media2.giphy.com/media/2iL5eLtQIzYunrxMA6/giphy.gif"
+                      />
                     </div>
                   </div>
                 </ProjectCard>
                 <ProjectCard id="prc-2">
-                  {" "}
+                  <img className="animate-click" src="https://i.imgur.com/W8pqzv4.png" />{" "}
                   <div className="row">
                     <div className="col-sm-6">
                       <ProjectHeader>WORKPLACE PROJECT</ProjectHeader>
@@ -537,15 +539,16 @@ class Home extends Component {
                       </a>
                     </div>
                     <div className="col-sm-6">
-                      <a href="https://drive.google.com/drive/folders/14wwzGtT8qypDnlqGyTdNeQaNS5XJQFVt?usp=sharing">
-                        <img id="project-3" src="https://i.imgur.com/qV2tI7u.png" />
-                      </a>
+                      <img id="project-3" src="https://i.imgur.com/qV2tI7u.png" />
+                      <img
+                        id="project-3-gif"
+                        src="https://media3.giphy.com/media/Jpdart0MMYzAb0QZUo/giphy.gif"
+                      />
                     </div>
                   </div>
                 </ProjectCard>
-
                 <ProjectCard>
-                  {" "}
+                  <img className="animate-click" src="https://i.imgur.com/W8pqzv4.png" />{" "}
                   <div className="row">
                     <div className="col-sm-6">
                       <ProjectHeader>WORKPLACE/PERSONAL PROJECT</ProjectHeader>
@@ -568,14 +571,15 @@ class Home extends Component {
                       </a>
                     </div>
                     <div className="col-sm-6">
-                      <a href="https://github.com/JoannaMakary/JoNutritionalInfo">
-                        <img id="project-4" src="https://i.imgur.com/3T4Yqt3.png" />
-                      </a>
+                      <img id="project-4" src="https://i.imgur.com/3T4Yqt3.png" />
+                      <img
+                        id="project-4-gif"
+                        src="https://media3.giphy.com/media/fXeQZ1refNWFanpLBk/giphy.gif"
+                      />
                     </div>
                   </div>
                 </ProjectCard>
                 <ProjectCard>
-                  {" "}
                   <div className="row">
                     <div className="col-sm-6">
                       <ProjectHeader>PERSONAL PROJECT</ProjectHeader>
@@ -606,7 +610,6 @@ class Home extends Component {
                   </div>
                 </ProjectCard>
                 <ProjectCard>
-                  {" "}
                   <div className="row">
                     <div className="col-sm-6">
                       <ProjectHeader>PERSONAL PROJECT</ProjectHeader>
@@ -640,7 +643,6 @@ class Home extends Component {
                   </div>
                 </ProjectCard>
                 <ProjectCard>
-                  {" "}
                   <div className="row">
                     <div className="col-sm-6">
                       <ProjectHeader>VIEW MORE</ProjectHeader>
