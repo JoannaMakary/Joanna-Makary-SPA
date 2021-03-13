@@ -172,7 +172,7 @@ function createCanvas() {
 
 function resize() {
   container = document.querySelector(".content--canvas");
-  if (container) {
+  if (container && canvas) {
     const { innerWidth, innerHeight } = window;
 
     canvas.a.width = innerWidth;
