@@ -290,7 +290,17 @@ class Home extends Component {
           </ErrorMessage>
         )}
         <Menu />
+
         <div id="main" className="content">
+          {vw >= 1000 && (
+            <div id="container">
+              {Array(4500)
+                .fill(1)
+                .map((el, i) => (
+                  <div className="hoverable"></div>
+                ))}
+            </div>
+          )}
           <div className="content__title">
             <JoannaText>Joanna Makary</JoannaText>
             <JobTitle>Junior Full-Stack Developer</JobTitle>

@@ -779,3 +779,50 @@
     margin-right: 100px;
   }
 }
+
+#container {
+  top: 0px;
+  width: 100vw;
+  height: 100vh;
+  margin: 30px auto 0px;
+  line-height: 0px;
+  position: absolute;
+}
+
+.hoverable {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin: 0px;
+  box-shadow: 20px 0px 0px 0px transparent, -20px 0px 0px 0px transparent,
+    0px 20px 0px 0px transparent, 0px -20px 0px 0px transparent;
+  transition: box-shadow 0.5s, background-color 0.7s;
+}
+
+.hoverable::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  display: block;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  box-shadow: 20px 20px 0px 0px transparent, -20px 20px 0px 0px transparent,
+    20px -20px 0px 0px transparent, -20px -20px 0px 0px transparent;
+  transition: box-shadow 0.3s;
+}
+
+.hoverable:hover {
+  box-shadow: 20px 0px 0px 0px rgba(176, 191, 255, 0.1), -20px 0px 0px 0px rgba(176, 191, 255, 0.1),
+    0px 20px 0px 0px rgba(176, 191, 255, 0.1), 0px -20px 0px 0px rgba(176, 191, 255, 0.1);
+  background-color: rgba(176, 191, 255, 0.1);
+  transition: none;
+}
+
+.hoverable:hover::before {
+  box-shadow: 20px 20px 0px 0px rgba(176, 191, 255, 0.1),
+    -20px 20px 0px 0px rgba(176, 191, 255, 0.1), 20px -20px 0px 0px rgba(176, 191, 255, 0.1),
+    -20px -20px 0px 0px rgba(176, 191, 255, 0.1);
+  transition: none;
+}
