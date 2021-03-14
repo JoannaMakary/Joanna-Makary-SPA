@@ -140,7 +140,6 @@ const Buttons = styled.div`
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
     margin-top: 20px;
     color: white;
-    margin-bottom: 20px;
     letter-spacing: 2px;
     font-size: 1rem;
     align-items: flex-start;
@@ -156,10 +155,15 @@ const Buttons = styled.div`
     line-height: 1.5;
     border-radius: 0.5rem;
     transition: 0.3s;
+    width: 100%;
     &:hover {
       background-color: rgba(176, 191, 255, 0.8);
       border: 2px solid white;
     }
+  }
+  @media (min-width: 768px) {
+    margin-bottom: 20px;
+    width: auto;
   }
   @media (min-width: 1080px) {
     font-size: 1.25rem;

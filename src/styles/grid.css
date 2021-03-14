@@ -9,6 +9,20 @@
   }
 
   #project-1,
+  #project-2,
+  #project-3,
+  #project-4,
+  #project-5,
+  #project-6,
+  #project-7,
+  #project-1-gif,
+  #project-2-gif,
+  #project-3-gif,
+  #project-4-gif {
+    margin-top: 30px;
+  }
+
+  #project-1,
   #project-4,
   #project-6 {
     width: 90%;
@@ -88,6 +102,16 @@
 }
 
 @media only screen and (min-width: 768px) {
+  #project-1,
+  #project-2,
+  #project-3,
+  #project-4,
+  #project-5,
+  #project-6,
+  #project-7 {
+    margin-top: 0px;
+  }
+
   #project-1-gif {
     position: absolute;
     width: 86%;
