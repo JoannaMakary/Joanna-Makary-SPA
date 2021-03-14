@@ -5,7 +5,6 @@ import Menu from "../core/Menu";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "../styles/grid.css";
-// import "../scripts/ambient";
 import "../scripts/boxmodel";
 import "../scripts/contact";
 import HorizontalScroll from "../scripts/horizontal-scroll";
@@ -205,29 +204,38 @@ const HorizontalSection = styled.section`
 `;
 
 const CardsContainer = styled.div`
-  position: relative;
-  height: 100%;
-  padding: 0px;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  align-items: center;
+  @media (min-width: 1px) {
+    padding-top: 80px;
+  }
+  @media (min-width: 768px) {
+    padding-top: 0px;
+    position: relative;
+    height: 100%;
+    padding: 0px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+  }
 `;
 
 const ProjectCard = styled.div`
   @media (min-width: 1px) {
+    background: linear-gradient(rgb(22, 24, 32), #1e2338);
     position: relative;
-    height: 100vh;
+    height: auto;
     width: 100vw;
     flex-shrink: 0;
-    padding: 2vw 2vw 0vw 8vw;
+    padding: 2vw 2vw 8vw 8vw;
   }
   @media (min-width: 768px) {
+    background: none;
     position: relative;
     height: auto;
     width: 100vw;
     flex-shrink: 0;
     padding: 2vw 2vw 0vw 8vw;
+    border-right: 2px rgba(176, 191, 255, 0.1) dashed;
   }
 `;
 
@@ -263,13 +271,12 @@ class Home extends Component {
   constructor() {
     super();
     this.state = {
-      items: [],
       errorMessage: "",
     };
   }
 
   render() {
-    const { items } = this.state;
+    let vw = window.innerWidth;
     return (
       <Homepage className="fade-in">
         <a id="backToTopButton"></a>
@@ -446,7 +453,235 @@ class Home extends Component {
           <ProjectSideBar id="project-side">PROJECTS</ProjectSideBar>
 
           <HorizontalSection>
-            <HorizontalScroll>
+            {vw >= 768 && (
+              <HorizontalScroll>
+                <CardsContainer>
+                  <ProjectCard id="royals">
+                    <img className="animate-click" src="https://i.imgur.com/W8pqzv4.png" />
+                    <div className="row" data-aos="fade-right" data-aos-once="true">
+                      <div className="col-sm-6">
+                        <ProjectHeader>PERSONAL PROJECT</ProjectHeader>
+                        <ProjectTitle>MapleRoyals Price Guide</ProjectTitle>
+                        <ProjectInfo>
+                          A website dedicated to the in-game market system in MapleRoyals.
+                          <ul className="mt-3">
+                            <li>Provides user with prices for in-game items.</li>
+                            <li>Provides stats on the % of change since last updated</li>
+                            <li>User register/login feature</li>
+                            <li>
+                              Specific admin features (admins can edit prices, add items, etc)
+                            </li>
+                          </ul>
+                          <span style={{ color: "#b0bfff" }}>Tools:</span> HTML, CSS, React,
+                          MongoDB, Express, Node (MERN Stack)
+                        </ProjectInfo>
+                        <a href="https://mapleroyalspriceguide.com/">
+                          <Buttons>View Website</Buttons>
+                        </a>
+                      </div>
+                      <div className="col-sm-6">
+                        <img id="project-1" src="https://i.imgur.com/gcChAxT.png" />
+                        <img
+                          id="project-1-gif"
+                          src="https://media0.giphy.com/media/Q1UPgr2bvSWUXOYvC8/giphy.gif"
+                        />
+                      </div>
+                    </div>
+                  </ProjectCard>
+                  <ProjectCard id="prc-1">
+                    <img className="animate-click" src="https://i.imgur.com/W8pqzv4.png" />{" "}
+                    <div className="row">
+                      <div className="col-sm-6">
+                        <ProjectHeader>WORKPLACE PROJECT</ProjectHeader>
+                        <ProjectTitle>PRC Caterers (WordPress)</ProjectTitle>
+                        <ProjectInfo>
+                          PRC Caterers is a kosher catering company that I currently work for as
+                          Junior Developer and Graphic Designer/Social Media Manager.
+                          <ul className="mt-3">
+                            <li>Creating order forms for e-commerce</li>
+                            <li>Custom CSS and JavaScript for webpages</li>
+                            <li>Plan, develop, design, test, deploy, maintain, optimize.</li>
+                          </ul>
+                          <span style={{ color: "#b0bfff" }}>Tools:</span> HTML, CSS, Javascript,
+                          PHP
+                        </ProjectInfo>
+                        <a href="https://github.com/JoannaMakary/PRC-Caterers">
+                          <Buttons className="mr-3">View Code</Buttons>
+                        </a>
+                        <a href="https://prccaterers.com/passover-menu/">
+                          <Buttons>Website</Buttons>
+                        </a>
+                      </div>
+                      <div className="col-sm-6">
+                        <img id="project-2" src="https://i.imgur.com/oWsieTO.png" />
+                        <img
+                          id="project-2-gif"
+                          src="https://media2.giphy.com/media/2iL5eLtQIzYunrxMA6/giphy.gif"
+                        />
+                      </div>
+                    </div>
+                  </ProjectCard>
+                  <ProjectCard id="prc-2">
+                    <img className="animate-click" src="https://i.imgur.com/W8pqzv4.png" />{" "}
+                    <div className="row">
+                      <div className="col-sm-6">
+                        <ProjectHeader>WORKPLACE PROJECT</ProjectHeader>
+                        <ProjectTitle>
+                          PRC Caterers
+                          <br />
+                          Graphic Design &#38; Social Media
+                        </ProjectTitle>
+                        <ProjectInfo>
+                          PRC Caterers is a kosher catering company that I currently work for as
+                          Junior Developer and Graphic Designer/Social Media Manager.
+                          <ul className="mt-3">
+                            <li>Created designs for our new soup labels.</li>
+                            <li>Created designs for proposals to send to clients.</li>
+                            <li>Creating social media campaigns and posts daily.</li>
+                          </ul>
+                          <span style={{ color: "#b0bfff" }}>Tools:</span> Adobe Photoshop,
+                          Illustrator
+                        </ProjectInfo>
+                        <a href="https://drive.google.com/drive/folders/14wwzGtT8qypDnlqGyTdNeQaNS5XJQFVt?usp=sharing">
+                          <Buttons className="mr-3">SELECTED WORKS</Buttons>
+                        </a>
+                        <a href="https://instagram.com/prccaterers">
+                          <Buttons>Instagram</Buttons>
+                        </a>
+                      </div>
+                      <div className="col-sm-6">
+                        <img id="project-3" src="https://i.imgur.com/qV2tI7u.png" />
+                        <img
+                          id="project-3-gif"
+                          src="https://media3.giphy.com/media/Jpdart0MMYzAb0QZUo/giphy.gif"
+                        />
+                      </div>
+                    </div>
+                  </ProjectCard>
+                  <ProjectCard>
+                    <img className="animate-click" src="https://i.imgur.com/W8pqzv4.png" />{" "}
+                    <div className="row">
+                      <div className="col-sm-6">
+                        <ProjectHeader>WORKPLACE/PERSONAL PROJECT</ProjectHeader>
+                        <ProjectTitle>Jo's Nutrition Calculator</ProjectTitle>
+                        <ProjectInfo>
+                          A program that I designed to help calculate nutritional information based
+                          on a given recipe. This was mainly created to help with getting nutrition
+                          for our products at PRC.
+                          <ul className="mt-3">
+                            <li>Takes the input from user's recipe</li>
+                            <li>Uses the USDA nutrition API to look up each item.</li>
+                            <li>
+                              Ouputs a nutritional table based on the given serving size/portion.
+                            </li>
+                          </ul>
+                          <span style={{ color: "#b0bfff" }}>Tools:</span> Python, APIs
+                        </ProjectInfo>
+                        <a href="https://github.com/JoannaMakary/JoNutritionalInfo">
+                          <Buttons className="mr-3">VIEW CODE</Buttons>
+                        </a>
+                      </div>
+                      <div className="col-sm-6">
+                        <img id="project-4" src="https://i.imgur.com/3T4Yqt3.png" />
+                        <img
+                          id="project-4-gif"
+                          src="https://media3.giphy.com/media/fXeQZ1refNWFanpLBk/giphy.gif"
+                        />
+                      </div>
+                    </div>
+                  </ProjectCard>
+                  <ProjectCard>
+                    <div className="row">
+                      <div className="col-sm-6">
+                        <ProjectHeader>PERSONAL PROJECT</ProjectHeader>
+                        <ProjectTitle>MapleRoyals Price Bot</ProjectTitle>
+                        <ProjectInfo>
+                          A Python program that I designed to help extract price information for the
+                          market system in the game MapleRoyals. This assists me in gathering prices
+                          for the website I have created (see first project). Currently in the
+                          process of training the bot to be more accurate.
+                          <ul className="mt-3">
+                            <li>Takes in a video recording of the game</li>
+                            <li>Splits the video into multiple frames and removes duplicates</li>
+                            <li>Scans the frames for item information and prices</li>
+                            <li>Stores this information into an excel sheet</li>
+                          </ul>
+                          <span style={{ color: "#b0bfff" }}>Tools:</span> Python, OCR (Tesseract),
+                          VirtualBox (Linux)
+                        </ProjectInfo>
+                        <a href="https://github.com/JoannaMakary/Royals-OCR">
+                          <Buttons className="mr-3">VIEW CODE</Buttons>
+                        </a>
+                      </div>
+                      <div className="col-sm-6">
+                        <a href="https://github.com/JoannaMakary/Royals-OCR">
+                          <img id="project-5" src="https://i.imgur.com/WAjWgwP.png" />
+                        </a>
+                      </div>
+                    </div>
+                  </ProjectCard>
+                  <ProjectCard>
+                    <div className="row">
+                      <div className="col-sm-6">
+                        <ProjectHeader>PERSONAL PROJECT</ProjectHeader>
+                        <ProjectTitle>World of League - Browser RPG</ProjectTitle>
+                        <ProjectInfo>
+                          World of League is a fan-made browser-based RPG inspired by the
+                          RPG/strategy MOBA League of Legends from Riot Games. You start the game as
+                          the first champion, Singed, and battle monsters that appear to gain EXP
+                          and gold, to be able to level up and purchase additional items and
+                          champions. Specifically made to improve my programming of object-oriented
+                          PHP.
+                          <ul className="mt-3">
+                            <li>Creating an account to login with.</li>
+                            <li>A shop to buy additional champions, items, and abilities.</li>
+                            <li>
+                              Randomly spawned monsters that appear while exploring the map, and
+                              options to fight or run.
+                            </li>
+                          </ul>
+                          <span style={{ color: "#b0bfff" }}>Tools:</span> HTML, CSS,
+                          Object-Oriented PHP
+                        </ProjectInfo>
+                        <a href="https://github.com/JoannaMakary/World-of-League">
+                          <Buttons className="mr-3">VIEW CODE</Buttons>
+                        </a>
+                      </div>
+                      <div className="col-sm-6">
+                        <a href="https://github.com/JoannaMakary/World-of-League">
+                          <img id="project-6" src="https://i.imgur.com/x2oneLd.png" />
+                        </a>
+                      </div>
+                    </div>
+                  </ProjectCard>
+                  <ProjectCard>
+                    <div className="row">
+                      <div className="col-sm-6">
+                        <ProjectHeader>VIEW MORE</ProjectHeader>
+                        <ProjectTitle>
+                          Visit my GitHub to see more <br />
+                          of my current projects
+                        </ProjectTitle>
+                        <ProjectInfo>
+                          This was a short list of my selected works. My other public projects are
+                          available on my GitHub. Private, in-progress, projects are not included
+                          but may be available one day!
+                        </ProjectInfo>
+                        <a href="https://github.com/JoannaMakary?tab=repositories">
+                          <Buttons className="mr-3">VISIT GITHUB</Buttons>
+                        </a>
+                      </div>
+                      <div className="col-sm-6">
+                        <a href="https://github.com/JoannaMakary?tab=repositories">
+                          <img id="project-7" src="https://i.imgur.com/p2SCOOv.png" />
+                        </a>
+                      </div>
+                    </div>
+                  </ProjectCard>
+                </CardsContainer>
+              </HorizontalScroll>
+            )}
+            {vw < 768 && (
               <CardsContainer>
                 <ProjectCard id="royals">
                   <img className="animate-click" src="https://i.imgur.com/W8pqzv4.png" />
@@ -667,7 +902,7 @@ class Home extends Component {
                   </div>
                 </ProjectCard>
               </CardsContainer>
-            </HorizontalScroll>
+            )}
           </HorizontalSection>
         </Projects>
         <div id="myModal" className="modal">
