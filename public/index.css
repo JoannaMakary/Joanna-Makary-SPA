@@ -666,8 +666,8 @@
   .animate-click {
     position: absolute;
     width: 150px;
-    top: -100px;
-    right: 100px;
+    bottom: 350px;
+    right: 10px;
   }
 }
 
@@ -683,6 +683,15 @@
   .database-box {
     height: 50vw;
     width: 50vw;
+  }
+}
+
+@media only screen and (min-width: 575px) {
+  .animate-click {
+    position: absolute;
+    width: 150px;
+    top: -100px;
+    right: 100px;
   }
 }
 
@@ -724,6 +733,13 @@
   .nav-item {
     padding-right: 15px;
     text-align: left;
+  }
+
+  .animate-click {
+    position: absolute;
+    width: 150px;
+    top: -100px;
+    right: 100px;
   }
 }
 

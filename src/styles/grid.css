@@ -1,86 +1,114 @@
-#scrollHorizontal {
-  height: 100vh;
-  width: 400vw;
-}
-
-section > div {
-  height: auto;
-}
-
-#project-1,
-#project-4,
-#project-6 {
-  width: 90%;
-}
-
-#project-2,
-#project-5 {
-  width: 100%;
-}
-
-#project-3,
-#project-7 {
-  width: 95%;
-}
-
-#project-1-gif {
-  position: absolute;
-  width: 86%;
-  display: none;
-}
-
-#project-2-gif {
-  position: absolute;
-  width: 96%;
-  display: none;
-}
-
-#project-3-gif {
-  position: absolute;
-  width: 90%;
-  display: none;
-}
-
-#project-4-gif {
-  position: absolute;
-  width: 86%;
-  display: none;
-}
-
-.swipe-in {
-  animation-name: keyswipein;
-  animation-duration: 0.25s;
-  animation-timing-function: linear;
-  animation-iteration-count: 1;
-  animation-direction: alternate;
-}
-
-@keyframes keyswipein {
-  0% {
-    right: 1000px;
-    top: 0px;
+@media only screen and (min-width: 1px) {
+  #scrollHorizontal {
+    height: 100vh;
+    width: 400vw;
   }
-  100% {
-    right: 0px;
-    top: 0px;
+
+  section > div {
+    height: auto;
+  }
+
+  #project-1,
+  #project-4,
+  #project-6 {
+    width: 90%;
+  }
+
+  #project-2,
+  #project-5 {
+    width: 100%;
+  }
+
+  #project-3,
+  #project-7 {
+    width: 95%;
+  }
+
+  #project-1-gif {
+    position: relative;
+    width: 90%;
+    display: none;
+  }
+
+  #project-2-gif {
+    position: relative;
+    width: 100%;
+    display: none;
+  }
+
+  #project-3-gif {
+    position: relative;
+    width: 95%;
+    display: none;
+  }
+
+  #project-4-gif {
+    position: relative;
+    width: 90%;
+    display: none;
+  }
+
+  .swipe-in {
+    animation-name: keyswipein;
+    animation-duration: 0.25s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+  }
+
+  @keyframes keyswipein {
+    0% {
+      right: 1000px;
+      top: 0px;
+    }
+    100% {
+      right: 0px;
+      top: 0px;
+    }
+  }
+
+  .swipe-out {
+    animation-name: keyswipeout;
+    animation-duration: 0.25s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+  }
+
+  @keyframes keyswipeout {
+    0% {
+      right: 0px;
+      top: 0px;
+    }
+    100% {
+      right: 1000px;
+      top: 0px;
+    }
   }
 }
 
-.swipe-out {
-  animation-name: keyswipeout;
-  animation-duration: 0.25s;
-  animation-timing-function: linear;
-  animation-iteration-count: 1;
-  animation-direction: alternate;
-}
-
-@keyframes keyswipeout {
-  0% {
-    right: 0px;
-    top: 0px;
+@media only screen and (min-width: 768px) {
+  #project-1-gif {
+    position: absolute;
+    width: 86%;
+    display: none;
   }
-  100% {
-    right: 1000px;
-    top: 0px;
+
+  #project-2-gif {
+    position: absolute;
+    width: 96%;
+    display: none;
+  }
+
+  #project-3-gif {
+    position: absolute;
+    width: 90%;
+    display: none;
+  }
+
+  #project-4-gif {
+    position: absolute;
+    width: 86%;
+    display: none;
   }
 }
