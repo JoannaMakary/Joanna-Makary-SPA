@@ -252,7 +252,7 @@ const Footer = styled.div`
     z-index: 99;
     height: 33vh;
     background: linear-gradient(#1e2338, black);
-    color: #b0bfff;
+    color: white;
     text-align: center;
     padding-top: 75px;
     font-size: 1.2em;

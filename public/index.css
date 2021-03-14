@@ -31,9 +31,8 @@
   #main {
     background-color: #212529;
     background-image: url("images/cube-background.gif");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background-size: auto;
+    background-position: bottom bottom;
   }
 
   #nav-brand {
@@ -688,6 +687,14 @@
 }
 
 @media only screen and (min-width: 768px) {
+  #main {
+    background-color: #212529;
+    background-image: url("images/cube-background.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
   .content__title {
     top: 45%;
   }
