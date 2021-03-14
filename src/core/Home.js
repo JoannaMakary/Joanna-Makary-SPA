@@ -5,7 +5,7 @@ import Menu from "../core/Menu";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "../styles/grid.css";
-import "../scripts/ambient";
+// import "../scripts/ambient";
 import "../scripts/boxmodel";
 import "../scripts/contact";
 import HorizontalScroll from "../scripts/horizontal-scroll";
@@ -279,7 +279,7 @@ class Home extends Component {
           </ErrorMessage>
         )}
         <Menu />
-        <div id="main" className="content content--canvas">
+        <div id="main" className="content">
           <div className="content__title">
             <JoannaText>Joanna Makary</JoannaText>
             <JobTitle>Junior Full-Stack Developer</JobTitle>
