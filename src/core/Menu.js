@@ -97,7 +97,7 @@ class Menu extends Component {
             <MenuItem className="nav-item">
               <a
                 className="nav-link"
-                href="https://drive.google.com/file/d/1-dDzQgWYRidZwHrHD-aYmAdYsvAkxhhz/view?usp=sharing"
+                href="https://drive.google.com/file/d/1Is648XJWd9Wvh7SOSjQMV4nlzuO5KU8v/view?usp=sharing"
               >
                 Resume
               </a>
